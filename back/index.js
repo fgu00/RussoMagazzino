@@ -39,13 +39,13 @@ apiServer.get("/insert",(req,res)=>{
       }
   }
       )
-      connection.query("SELET * FROM magazzino ORDER BY name",
+      connection.query("SELET * FROM c190_primo.magazzino ORDER BY nome",
       function(err,result){
         if(err){
             res.status(400).json({ message: "sign-up faileds" });
         }else{
-          res.status(200).json({ message: "sign-up success" });
           res.send(result);
+          res.status(200).json({ message: "sign-up success" });
       }
   }
       )
