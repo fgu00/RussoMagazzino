@@ -8,7 +8,7 @@ var host = "localhost";
 var port = 3000;
 
 const connection = mysql.createConnection({
-  host: 'russo.salvatore.tave.osd',
+  host: 'russo.salvatore.tave.osdb.it',
   user: 'c190_salvo',
   database: 'c190_primo',
   password:  "Az-17694"
