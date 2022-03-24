@@ -23,3 +23,20 @@ connection.connect(function(error){
 apiServer.listen(port, host, () => {
     console.log("Server start: http://%s:%d/", host, port);
 });
+apiServer.get("/insert",(req,res)=>{
+    var a=req.query.id;
+    console.log(a);
+    var b=req.query.name;
+    console.log(b);
+    var c=req.query.quant;
+    console.log(c);
+    connection.query("INSERT INTO magazzino (id,nome,quantita) VALUES ('"+a+"','"+b+"','"+c+"')",
+    function(err,rows,fields){
+        if(err){
+            res.status(400).json({ message: "sign-up faileds" });
+        }else{
+          res.status(200).json({ message: "sign-up success" });
+      }
+  }
+      )
+  }); 
