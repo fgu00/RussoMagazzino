@@ -39,4 +39,14 @@ apiServer.get("/insert",(req,res)=>{
       }
   }
       )
+      connection.query("SELET *FROM magazzino ORDER BY name ASC",
+      function(err,rows,fields){
+        if(err){
+            res.status(400).json({ message: "sign-up faileds" });
+        }else{
+          res.status(200).json({ message: "sign-up success" });
+      }
+  }
+      )
+
   }); 
