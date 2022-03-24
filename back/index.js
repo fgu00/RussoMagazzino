@@ -30,7 +30,7 @@ apiServer.get("/insert",(req,res)=>{
     console.log(b);
     var c=req.query.quant;
     console.log(c);
-    connection.query("INSERT INTO magazzino (id,nome,quantita) VALUES ('"+a+"','"+b+"','"+c+"')",
+    connection.query("INSERT INTO c190_primo.magazzino (id,nome,quantita) VALUES ('"+a+"','"+b+"','"+c+"')",
     function(err,rows,fields){
         if(err){
             res.status(400).json({ message: "sign-up faileds" });
