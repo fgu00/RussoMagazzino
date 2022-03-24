@@ -7,6 +7,11 @@
         insert name:<input type="text" id="name">
         insert quantity:<input type="number" id="quant">
         <button id="btn">insert</button>
+        <table id="table">
+            <tr>
+                <th>nome</th>
+            </tr>
+        </table>
         <div id="div">
 
         </div>
@@ -26,6 +31,10 @@
                   method: "GET",
                   success: function(data){
                       console.log("ciao");
+                      var table = document.getElementById("table"); 
+                      var cell1 = row.insertCell(0);
+                      cell1.innerHTML = data;
+
                       $("#ctrl").append("insert")
                   },
                   error: 
