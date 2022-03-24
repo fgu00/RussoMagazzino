@@ -17,9 +17,9 @@ connection.connect(function(error){
     if(!!error){
         console.log('error: '+error)
     }else{
-        console.log('connesso al db')
+        console.log('connection on db')
     }
  })
 apiServer.listen(port, host, () => {
-    console.log("Server partito: http://%s:%d/", host, port);
+    console.log("Server start: http://%s:%d/", host, port);
 });
