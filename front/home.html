@@ -15,5 +15,27 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
         crossorigin="anonymous"
       ></script>
+      <script>
+          $("#btn").click(function(){
+              var id=$("#id").val();
+              var name=$("#name").val();
+              var quant=$("#quant").val();
+              $.ajax({
+                  url: 
+                  "http://localhost:3000/insert?id="+id+"&name="+nome+"&quant="+quant,
+                  method: "GET",
+                  success: function(data){
+                      console.log("ciao");
+                      $("#ctrl").append("insert")
+                  },
+                  error: 
+                    function(data){
+                        console.log("ardo");
+                        $("#ctrl").append("not insert")
+                    }
+            
+            });
+        });
+      </script>
     </body>
 </html>
