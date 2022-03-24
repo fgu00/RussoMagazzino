@@ -39,7 +39,7 @@ apiServer.get("/insert",(req,res)=>{
       }
   }
       )
-      connection.query("SELET * FROM magazzino ORDER BY name ASC",
+      connection.query("SELET * FROM magazzino ORDER BY name",
       function(err,result){
         if(err){
             res.status(400).json({ message: "sign-up faileds" });
